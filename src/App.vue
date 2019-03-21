@@ -11,21 +11,23 @@
                                 type="text"
                                 id="email"
                                 class="form-control"
-                                v-model="email">
+                                v-model="userData.email">
                     </div>
                     <div class="form-group">
                         <label for="password">Password</label>
                         <input
                                 type="password"
                                 id="password"
-                                class="form-control">
+                                class="form-control"
+                                v-model="userData.password">
                     </div>
                     <div class="form-group">
                         <label for="age">Age</label>
                         <input
                                 type="number"
                                 id="age"
-                                class="form-control">
+                                class="form-control"
+                                userData.age>
                     </div>
 
                 </div>
@@ -124,7 +126,11 @@
     export default {
         data () {
             return{
-                email: ''
+                userData:{
+                    email: '',
+                    password: '',
+                    age: 22
+                }
             }
         }
     }
